@@ -10,3 +10,7 @@ HTML5DateField:
   default_config:
     dateformat: 'dd/MM/yyyy'
     showcalendar: false
+HTML5TimeField:
+  default_config:
+    timeformat: 'H:mm:s'
+  interval: '900'
