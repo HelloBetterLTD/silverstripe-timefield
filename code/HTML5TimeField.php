@@ -5,14 +5,9 @@ class HTML5TimeField extends TimeField {
     private $interval = '600';
 
     public function __construct($name, $title = null, $value = "") {
-        $this->setConfig('timeformat', 'H:mm:s');
+        $this->setConfig('timeformat', 'HH:mm:s');
         $this->setInterval($this->Config()->interval);
         parent::__construct($name,$title,$value);
-    }
-
-    public function setConfig($name, $val) {
-        $this->config[$name] = $val;
-        return $this;
     }
 
     public function getAttributes() {
@@ -20,13 +15,21 @@ class HTML5TimeField extends TimeField {
             parent::getAttributes(),
             array(
                 'type'  => 'time',
-                'step'  => $this->$interval
+                'step'  => $this->interval
             )
         );
     }
 
+    public function setConfig($name, $val) {
+        if($name == 'timeformat')
+            $val = 'HH:mm:s';
+
+        $this->config[$name] = $val;
+        return $this;
+    }
+
     public function setInterval($iInterval){
-        $this->$interval = $iInterval;
+        $this->interval = $iInterval;
     }
 
 } 
