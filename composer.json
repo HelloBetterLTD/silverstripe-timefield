@@ -1,0 +1,9 @@
+{
+	"name": "silverstripe-timefield",
+	"description": "HTML5 time field for Silverstripe",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "timefield"],
+	"require": {
+		"silverstripe/framework": "3.*"
+	}
+}
