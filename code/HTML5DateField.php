@@ -3,13 +3,8 @@
 class HTML5DateField extends DateField {
 
     public function __construct($name, $title = null, $value = "") {
-        $this->setConfig('dateformat', 'yyyy-MM-dd');
+        $this->setConfig('dateformat', 'mm-dd-yyyy');
         parent::__construct($name,$title,$value);
-    }
-
-    public function setConfig($name, $val) {
-        $this->config[$name] = $val;
-        return $this;
     }
 
     public function getAttributes() {
@@ -19,6 +14,14 @@ class HTML5DateField extends DateField {
                 'type' => 'date'
             )
         );
+    }
+
+    public function setConfig($name, $val) {
+        if($name == 'dateformat')
+            $val = 'mm-dd-yyyy';
+
+        $this->config[$name] = $val;
+        return $this;
     }
 
 } 

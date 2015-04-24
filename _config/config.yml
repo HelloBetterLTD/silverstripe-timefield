@@ -1,0 +1,12 @@
+---
+Name: silverstripe-timefield
+After: 'framework/*'
+---
+# YAML configuration for SilverStripe
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+# Caution: Indentation through two spaces, not tabs
+
+HTML5DateField:
+  default_config:
+    dateformat: 'dd/MM/yyyy'
+    showcalendar: false

@@ -1,0 +1,13 @@
+.field .dropdown.date-select,
+.field .dropdown.time-select {
+    float: left;
+    display: block;
+    width: 60px;
+    margin-left: 0 !important;
+    margin-right: 5px !important;
+    margin-top: 5px !important;
+}
+
+.field .dropdown.time-select {
+    width: 70px;
+}
