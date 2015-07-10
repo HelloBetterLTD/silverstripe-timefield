@@ -30,6 +30,7 @@ class HTML5TimeField extends TimeField {
 
     public function setInterval($iInterval){
         $this->interval = $iInterval;
+        return $this;
     }
 
 } 
