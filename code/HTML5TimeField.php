@@ -1,16 +1,19 @@
 <?php
 
-class HTML5TimeField extends TimeField {
+class HTML5TimeField extends TimeField
+{
 
     private $interval = '600';
 
-    public function __construct($name, $title = null, $value = "") {
+    public function __construct($name, $title = null, $value = "")
+    {
         $this->setConfig('timeformat', 'HH:mm:s');
         $this->setInterval($this->Config()->interval);
-        parent::__construct($name,$title,$value);
+        parent::__construct($name, $title, $value);
     }
 
-    public function getAttributes() {
+    public function getAttributes()
+    {
         return array_merge(
             parent::getAttributes(),
             array(
@@ -20,17 +23,19 @@ class HTML5TimeField extends TimeField {
         );
     }
 
-    public function setConfig($name, $val) {
-        if($name == 'timeformat')
+    public function setConfig($name, $val)
+    {
+        if ($name == 'timeformat') {
             $val = 'HH:mm:s';
+        }
 
         $this->config[$name] = $val;
         return $this;
     }
 
-    public function setInterval($iInterval){
+    public function setInterval($iInterval)
+    {
         $this->interval = $iInterval;
         return $this;
     }
-
-} 
+}
